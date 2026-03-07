@@ -69,7 +69,7 @@ nav.scrolled {
 
 /* ── HERO ── */
 #hero {
-  min-height: 100vh;
+  min-height: 88vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #18100a;
@@ -83,16 +83,17 @@ nav.scrolled {
 
 .hero-photo {
   position: relative;
-  height: 100vh;
+  height: 88vh;
   overflow: hidden;
   z-index: 1;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 4rem;
 }
 .hero-photo img {
-  width: 62%; height: 75%;
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62%;
+  height: 90vh;
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -178,7 +179,8 @@ nav.scrolled {
   font-style: normal;
   line-height: 1.6;
   color: rgba(248,245,240,0.72);
-  max-width: 30ch;
+  max-width: none;
+  white-space: nowrap;
   margin-bottom: 3rem;
   letter-spacing: 0.03em;
   opacity: 1;
@@ -318,7 +320,7 @@ section { padding: 6rem 0; }
   background: var(--border-d); border: 1px solid var(--border-d);
 }
 .focus-card {
-  background: var(--dark2); padding: 2.2rem;
+  background: var(--dark2); padding: 2.8rem;
   transition: background .25s; position: relative; overflow: hidden;
   display: flex; flex-direction: column;
 }
@@ -331,18 +333,18 @@ section { padding: 6rem 0; }
   transition: transform .3s;
 }
 .focus-card:hover::after { transform: scaleX(1); }
-.focus-icon { color: var(--teal); margin-bottom: 1.1rem; display: block; }
+.focus-icon { color: var(--teal); margin-bottom: 1.4rem; display: block; width: 40px; height: 40px; }
 .focus-title {
   font-family: "Lora", serif;
-  font-size: 1.2rem; color: var(--text-d); margin-bottom: .65rem;
+  font-size: 1.45rem; color: var(--text-d); margin-bottom: .8rem;
 }
-.focus-desc { font-size: .88rem; color: var(--muted-d); line-height: 1.7; }
-.tags { margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: .45rem; }
+.focus-desc { font-size: 1rem; color: var(--muted-d); line-height: 1.75; }
+.tags { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: .5rem; }
 .focus-spacer { flex: 1; min-height: 0; }
-.focus-card-footer { padding-top: 1.6rem; display: flex; align-items: center; }
+.focus-card-footer { padding-top: 1.8rem; display: flex; align-items: center; }
 .focus-link {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(248,245,240,0.45);
@@ -362,7 +364,7 @@ section { padding: 6rem 0; }
 }
 .tag {
   font-family: "IBM Plex Mono", monospace;
-  font-size: .6rem; padding: .22rem .6rem;
+  font-size: .68rem; padding: .28rem .75rem;
   border: 1px solid; letter-spacing: .06em; text-transform: uppercase;
 }
 .tag-teal  { border-color: rgba(46,125,107,.35); color: var(--teal2); }
@@ -574,7 +576,7 @@ footer p {
     <div class="rule"></div>
     <div class="focus-grid">
       <div class="focus-card">
-        <svg class="focus-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="focus-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/>
           <line x1="12" y1="7" x2="5" y2="17"/><line x1="12" y1="7" x2="19" y2="17"/><line x1="5" y1="19" x2="19" y2="19"/>
         </svg>
@@ -592,7 +594,7 @@ footer p {
         </div>
       </div>
       <div class="focus-card">
-        <svg class="focus-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="focus-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
@@ -610,7 +612,7 @@ footer p {
         </div>
       </div>
       <div class="focus-card">
-        <svg class="focus-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="focus-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
         </svg>
         <h3 class="focus-title">Cloud Infrastructure</h3>
@@ -757,8 +759,8 @@ footer p {
         <p>Whether you're a researcher, engineer, or simply curious about how AI is being applied to environmental problems — reach out.</p>
       </div>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#43352a302b222f35292c3026332b717003242e222a2f6d202c2e" class="contact-link">
-          <span class="contact-icon">✉</span><span class="__cf_email__" data-cfemail="63150a100b020f15090c1006130b515023040e020a0f4d000c0e">[email&#160;protected]</span>
+        <a href="/cdn-cgi/l/email-protection#62140b110a030e14080d1107120a505122050f030b0e4c010d0f" class="contact-link">
+          <span class="contact-icon">✉</span><span class="__cf_email__" data-cfemail="7107180219101d071b1e02140119434231161c10181d5f121e1c">[email&#160;protected]</span>
         </a>
         <a href="https://www.linkedin.com/in/vishalvjoseph" target="_blank" class="contact-link">
           <span class="contact-icon">in</span>linkedin.com/in/vishalvjoseph
@@ -775,7 +777,7 @@ footer p {
   <p>© 2026 Vishal Vincent Joseph · Data Science Research Manager</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function() {
   // Match tagline width to name
   function matchTaglineToName() {
@@ -821,14 +823,4 @@ footer p {
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  fadeEls.forEach(function(el) { observer.observe(el); });
-})();
-</script>
-<script data-cfas
+        entry.target
