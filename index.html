@@ -43,7 +43,7 @@ body {
 
 /* ── NAV ── */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
   display: flex; justify-content: space-between; align-items: center;
   padding: 1.2rem 3rem;
   transition: background .3s, border-color .3s;
@@ -494,7 +494,7 @@ footer p {
   border: none;
   cursor: pointer;
   padding: 4px;
-  z-index: 300;
+  z-index: 500;
 }
 .hamburger span {
   display: block;
@@ -509,7 +509,7 @@ footer p {
 
 .mobile-overlay {
   display: none;
-  position: fixed; inset: 0; z-index: 190;
+  position: fixed; inset: 0; z-index: 400;
   background: rgba(17,18,16,0.97);
   backdrop-filter: blur(12px);
   flex-direction: column;
@@ -903,8 +903,8 @@ footer p {
         <p>Whether you're a researcher, engineer, or simply curious about how AI is being applied to environmental problems — reach out.</p>
       </div>
       <div class="contact-links">
-        <a href="mailto:vishalvjoseph23@gmail.com" class="contact-link">
-          <span class="contact-icon">✉</span>vishalvjoseph23@gmail.com
+        <a href="/cdn-cgi/l/email-protection#07716e746f666b716d687462776f353447606a666e6b2964686a" class="contact-link">
+          <span class="contact-icon">✉</span><span class="__cf_email__" data-cfemail="bbcdd2c8d3dad7cdd1d4c8decbd38988fbdcd6dad2d795d8d4d6">[email&#160;protected]</span>
         </a>
         <a href="https://www.linkedin.com/in/vishalvjoseph" target="_blank" class="contact-link">
           <span class="contact-icon">in</span>linkedin.com/in/vishalvjoseph
@@ -921,7 +921,7 @@ footer p {
   <p>© 2026 Vishal Vincent Joseph · Data Science Research Manager</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function() {
   // Match tagline width to name (only on wider screens)
   function matchTaglineToName() {
@@ -982,10 +982,3 @@ footer p {
   );
   fadeEls.forEach(function(el) {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(18px)';
-    el.style.transition = 'opacity .6s ease, transform .6s ease';
-  });
-  var obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        
