@@ -488,6 +488,9 @@ footer p {
 /* ── HAMBURGER MENU ── */
 .hamburger {
   display: none;
+  position: fixed;
+  top: 1.2rem;
+  right: 3rem;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -495,6 +498,8 @@ footer p {
   cursor: pointer;
   padding: 4px;
   z-index: 500;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 .hamburger span {
   display: block;
@@ -585,6 +590,7 @@ footer p {
 /* Small tablets / large phones */
 @media (max-width: 600px) {
   nav { padding: 1rem 1.5rem; }
+  .hamburger { top: 1rem; right: 1.5rem; }
 
   #hero { height: auto; }
   .hero-photo {
@@ -641,10 +647,10 @@ footer p {
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
+<button class="hamburger" id="hamburger" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
 <div class="mobile-overlay" id="mobileMenu">
   <a href="#about">About</a>
   <a href="#focus">Research</a>
